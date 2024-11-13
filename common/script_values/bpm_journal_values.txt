@@ -1927,3 +1927,49 @@ bpm_movement_exhaustion_from_labor_ig_exhaustion = {
 		}
 	}
 }
+
+### MILITARY REFORMS ###
+bpm_je_military_reformism_progress_rate = {
+	value = 0
+	add = bpm_je_military_reformism_progress_from_base
+	add = bpm_je_military_reformism_progress_from_conflicts
+	add = bpm_je_military_reformism_progress_from_peace
+}
+
+bpm_je_military_reformism_progress_from_base = {
+	value = 0
+}
+bpm_je_military_reformism_progress_from_conflicts = {
+	value = 0
+	if = {
+		limit = { is_at_war = yes }
+		add = 1
+	}
+}
+
+bpm_je_military_reformism_progress_from_intense_conflicts = {
+	value = 0
+	if = {
+		limit = { is_at_war = yes }
+		if = {
+			limit = {
+				any_scope_war = {
+					has_war_support = {
+						target = root
+						value <= 0
+					}
+				}
+			}
+			add = 1
+		}
+	}
+}
+
+bpm_je_military_reformism_progress_from_peace = {
+	value = 0
+	if = {
+		limit = { is_at_war = no }
+		add = -1
+	}
+}
+

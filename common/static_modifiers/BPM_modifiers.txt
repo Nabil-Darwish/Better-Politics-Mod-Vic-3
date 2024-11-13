@@ -3,6 +3,12 @@ bpm_stubborn_ig = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	interest_group_approval_add = -5
 }
+
+bpm_angry_ig = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_approval_add = -5
+}
+
 bpm_very_stubborn_ig = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	interest_group_approval_add = -20
@@ -15,6 +21,17 @@ bpm_1848_stubborn_ig = {
 bpm_emboldened_ig = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	interest_group_pop_attraction_mult = 0.2
+}
+
+bpm_strengthened_ig = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_pop_attraction_mult = 0.25
+}
+
+bpm_incensed_ig = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
+	interest_group_approval_add = -5
+	interest_group_pop_attraction_mult = 0.25
 }
 
 bpm_empowered_ig = {
@@ -90,6 +107,11 @@ bpm_high_command_chaos = {
 	unit_offense_mult = -0.25
 	unit_defense_mult = -0.25
 	country_military_tech_research_speed_mult = -0.25
+}
+
+bpm_military_pride = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	country_prestige_from_army_power_projection_mult = 0.25
 }
 
 bpm_new_constitution = {

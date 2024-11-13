@@ -1,0 +1,34 @@
+je_bpm_military_reformism_progress_bar = {
+	name = "je_bpm_military_reformism_progress_bar"
+	desc = "je_bpm_military_reformism_progress_bar_desc"
+	default = yes
+	monthly_progress = {
+		add = {
+			desc = "bpm_je_military_reformism_progress_from_base_desc"
+			owner = {
+				add = bpm_je_military_reformism_progress_from_base
+			}
+		}
+		add = {
+			desc = "bpm_je_military_reformism_progress_from_conflicts_desc"
+			owner = {
+				add = bpm_je_military_reformism_progress_from_conflicts
+			}
+		}
+		add = {
+			desc = "bpm_je_military_reformism_progress_from_intense_conflicts_desc"
+			owner = {
+				add = bpm_je_military_reformism_progress_from_intense_conflicts
+			}
+		}
+		add = {
+			desc = "bpm_je_military_reformism_progress_from_peace_desc"
+			owner = {
+				add = bpm_je_military_reformism_progress_from_peace
+			}
+		}
+	}
+	start_value = 0
+	min_value = 0
+	max_value = 100
+}

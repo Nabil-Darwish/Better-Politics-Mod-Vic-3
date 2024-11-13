@@ -1,0 +1,61 @@
+# This is the journal entry to allow for backwards nations to reform their military quicker
+# The longer they are at war, the more progress they accrue. If they are exhausted, progress goes faster. 
+# When at peace, progress goes down
+
+je_bpm_outmoded_military{
+	group = je_group_internal_affairs
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+	is_shown_when_inactive = {
+		AND = {
+			NOT = { has_variable = bpm_outmoded_military_done }
+			has_law = law_type:law_noble_officers
+			has_law = law_type:law_peasant_levies
+		}
+	}
+
+	possible = {
+		
+	}
+
+    complete = {
+        AND = {
+			NOT = {has_law = law_type:law_noble_officers}
+			NOT = {has_law = law_type:law_peasant_levies}
+		}
+	}
+
+    on_complete = {
+		set_variable = bpm_outmoded_military_done
+		trigger_event = { id = bpm_military_reform.2 }
+	}
+
+	fail = {
+		custom_tooltip = {
+            text = bpm_je_progress_complete
+            scope:journal_entry = {
+				"scripted_bar_progress(je_bpm_military_reformism_progress_bar)" >= 100
+			}
+        }
+	}
+
+	on_fail = {
+		set_variable = bpm_outmoded_military_done
+		custom_tooltip = {
+			text = bpm_stability_decrease_50
+			has_variable = bpm_political_stability
+			change_variable = {
+				name = bpm_political_stability
+				add = -50
+			}
+		}
+		trigger_event = { id = bpm_military_reform.1 }
+	}
+
+	scripted_progress_bar = je_bpm_military_reformism_progress_bar
+
+	weight = 100
+
+	should_be_pinned_by_default = no
+}

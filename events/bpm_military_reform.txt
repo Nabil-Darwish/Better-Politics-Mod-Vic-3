@@ -1,0 +1,106 @@
+namespace = bpm_military_reform
+
+# Military Reform Success
+bpm_military_reform.1 = {
+    type = country_event
+	placement = root
+	title = bpm_military_reform.1.t
+	desc = bpm_military_reform.1.d
+	flavor = bpm_military_reform.1.f
+
+	dlc = dlc_bpm
+
+    event_image = {
+		video = "ep1_ca_mountain_pass_military"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+    duration = 3
+
+    trigger = {
+		# triggered by JE
+	}
+
+    option = { # Conservative Option
+		name = bpm_military_reform.1.a
+		default_option = yes
+		ig:ig_conservatives = {
+			add_modifier = {
+				name = bpm_strengthened_ig
+				years = 5
+				is_decaying = yes
+			}
+		}
+	}
+	
+	option = {	# Liberal Option
+		name = bpm_military_reform.1.b
+		ig:ig_conservatives = {
+			add_modifier = {
+				name = bpm_incensed_ig
+				years = 5
+				is_decaying = yes
+			}
+		}
+		ig:ig_reactionaries = {
+			add_modifier = {
+				name = bpm_angry_ig
+				years = 5
+				is_decaying = yes
+			}
+		}
+		ig:ig_landowners = {
+			add_modifier = {
+				name = bpm_angry_ig
+				years = 5
+				is_decaying = yes
+			}
+		}
+		ig:ig_liberals = {
+			add_modifier = {
+				name = bpm_strengthened_ig
+				years = 5
+				is_decaying = yes
+			}
+		}
+	}
+}
+
+#Miltary Reform Failure
+bpm_military_reform.2 = {
+    type = country_event
+	placement = root
+	title = bpm_military_reform.2.t
+	desc = bpm_military_reform.2.d
+	flavor = bpm_military_reform.2.f
+
+	dlc = dlc_bpm
+
+    event_image = {
+		video = "unspecific_military_parade"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+    duration = 3
+
+    trigger = {
+		# triggered by JE
+	}
+
+    option = { # Success
+		name = bpm_military_reform.2.a
+		default_option = yes
+		add_modifier = {
+			name = bpm_military_pride
+			years = 10
+			is_decaying = yes
+		}
+	}
+}
+

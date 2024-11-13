@@ -1,8 +1,0 @@
-
-*.psd
-*.ai
-
-# Support scripts
-support-scripts/**/__pycache__
-support-scripts/**/input
-support-scripts/**/output

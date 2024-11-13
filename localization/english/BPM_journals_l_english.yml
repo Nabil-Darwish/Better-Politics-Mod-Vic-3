@@ -29,6 +29,29 @@
  bpm_tutorial.1.f:0 "A new air of political dynamism flows through the capital, perhaps an era of change is upon us."
  bpm_tutorial.1.a:0 "Onwards!"
 
+# OUTMODED MILITARY
+ je_bpm_outmoded_military:0 "Outmoded Military"
+ je_bpm_outmoded_military_status:0 "Strengthen the national army."
+ je_bpm_outmoded_military_reason:0 "Reformists within the government have sounded concerns of our traditional military organisation. They claim that it makes our army weaker. If a long, drawn out war breaks out, we may have to listen to their demands"
+ je_bpm_military_reformism_progress_bar: "Military Reform Desire"
+ je_bpm_military_reformism_progress_bar_desc: "#v [JournalEntry.GetCurrentBarProgress(ScriptedProgressBar.Self)|%]#! ([JournalEntry.GetCurrentBarValue(ScriptedProgressBar.Self)|1]/100) changing by #v [SCOPE.GetRootScope.GetCountry.MakeScope.ScriptValue('bpm_je_military_reformism_progress_rate')|+=]#! every month."
+ bpm_je_military_reformism_progress_from_base_desc: "base value"
+ bpm_je_military_reformism_progress_from_conflicts_desc: "being in Wars"
+ bpm_je_military_reformism_progress_from_intense_conflicts_desc: "being in Wars with at least 100 War Exhaustion"
+ bpm_je_military_reformism_progress_from_peace_desc: "being at Peace"
+ bpm_stability_decrease_50:0 "[Concept('concept_bpm_political_stability', 'Political Rigidity')] decreases by 50"
+
+ bpm_military_reform.1.t:0 "At the Barrel of a Gun"
+ bpm_military_reform.1.d:0 "As the war drags on with our military humiliated in recent years, we increasingly have to face the reality that war has changed. The reformists have won out in the military organisation debate.\n\nDespite the need for military reforms apparent, the [GetInterestGroupVariant('ig_landowners',GetPlayer).GetName] are concerned that military reforms would bring about political reforms too. In our drive for military modernisation, which approach should we favour?"
+ bpm_military_reform.1.f:0 "Learn barbarian methods to combat barbarian threats!\n\n - Self Strengthening Movement,1860s"
+ bpm_military_reform.1.a:0 "With stronger arms, we will uphold the current order."
+ bpm_military_reform.1.b:0 "Military reforms are not enough!"
+
+ bpm_military_reform.2.t:0 "Nothing Learned, Nothing Gained"
+ bpm_military_reform.2.d:0 "We have managed to successfully reformed out military in line with more modern organisation techniques. Elites are convinced that this shows that the current system works. They are even organising parades to celebrate.\n\nWithin the homes of reformers, however, the mood is more muted. They feel that we have missed their opportunity to enact further reforms. Time will tell if the current mood is pride before the fall."
+ bpm_military_reform.2.f:0 "War is nothing but the continuation of policy with other means" \n\n - General Carl Von Clausewitz"
+ bpm_military_reform.2.a:0 "Three Huzzahs for [ROOT.GetCountry.GetName]!"
+
 # PARTY BAN
  je_bpm_ban_communists:0 "Anti-Socialist Laws"
  je_bpm_ban_communists_status:0 "Root out socialist organizations from government."
